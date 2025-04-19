@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <!-- TODO Favicon File -->
+    <link rel="icon" href="./image/todo-favicon.png" type="image/x-icon">
+    <!-- External CSS File -->
+    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div id="todo-wrapper">
+        <h1 id="todo-heading">
+            TO<span>D</span><span class="second">O<i class="fa-solid fa-check"></i></span>
+        </h1>
+    
+        <div class="container">
+            <div class="personal" onclick="personal()">Personal</div>
+            <div class="professional" onclick="professional()">Professional</div>
+        </div>
+    
+    
+        
+        <div class="input-container">
+            <input class="input-filed" type="text" placeholder="What do you need to do?">
+            <button class="addBtn">ADD</button>
+        </div>
+
+
+        <div class="todo-container">
+            
+            
+        </div>
+
+
+        <div class="clearAll">
+            <button class="clearBtn">Clear All</button>
+            <i class="fa-solid fa-trash"></i>
+        </div>
+    </div>
+    
+
+    
+
+
+
+
+
+
+    <!-- External JavaScript File -->
+    <script src="./script.js"></script>
+</body>
+</html>

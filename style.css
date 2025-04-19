@@ -1,0 +1,215 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    font-family: 'Poppins', sans-serif;
+}
+html{
+    font-size:16px;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: #ebdbdb;
+    color: black;
+}
+#todo-wrapper{
+    width:80%;
+    margin:0 auto;
+
+}
+#todo-heading{
+    text-align:center;
+    font-size:3rem;
+    padding:1rem 0;
+    font-weight: lighter;
+    background-color:#ddcdbf;
+
+    span{
+        color:dodgerblue;
+    }
+    
+    .second{
+        position:relative;
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .fa-check{
+        font-size: 25px;
+        color:red;
+        position: absolute;
+        animation: marks 0.5s linear infinite alternate;
+
+        &:hover{
+            color: dodgerblue;
+        }
+    }
+}
+@keyframes marks {
+    0%{
+        color:black;
+    }
+    50%{
+        color:dodgerblue;
+    }
+    100%{
+        color:red;
+    }
+}
+
+.container{
+    background-color: #f0e5d0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.personal, .professional{
+    cursor: pointer;
+    padding:1rem 0;
+    width:50%;
+    text-align: center;
+    font-size: 20px;
+}
+
+
+.input-container{
+    background: #ddcdbf;
+    width:90%;
+    height:2.6rem;
+    margin:0 auto;
+    display: flex;
+    border-radius: 2rem;
+    margin-top: 2rem;
+    overflow: hidden;
+    border:2px solid dodgerblue;
+}
+.input-filed, .addBtn{
+    border: none;
+    outline: none;
+}
+.input-filed{
+    flex: 1;
+    background-color: transparent;
+    font-size: 1.2rem;
+    color: black;
+    padding-inline: 1rem;
+}
+.addBtn{
+    background-color: dodgerblue;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: inherit;
+    color:#fff;
+    cursor: pointer;
+    padding-inline: 1rem;
+
+    &:hover{
+        background-color: #4f15fc;
+    }
+}
+.todo-container{
+    background: rgb(175, 156, 156);
+    width:90%;
+    margin:1rem auto;
+    border-radius: 20px;
+    padding:20px;
+    box-shadow: 2px 2px 5px 1px #1e8fff81;
+}
+
+.item-container{
+    background: rgb(203 203 203);
+    width:90%;
+    margin:1rem auto;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    padding:0px 20px;
+
+}
+
+.todo-icon{
+    color:dodgerblue;
+    margin-right:20px;
+    font-size: 1.rem;
+}
+.todo-item{
+    flex:1;
+    padding:0.8rem 0;
+    font-size: 1.2rem;
+    /* border-bottom: 2px solid dodgerblue; */
+}
+.todo-editBtn, .todo-deleteBtn{
+    border:none;
+    outline:none;
+    background-color: transparent;
+    font-size: 1.2rem;
+    margin-right:10px;
+    cursor: pointer;
+
+    &:hover{
+        color:dodgerblue;
+        scale: 1.1;
+        transition: all 0.5s;
+    }
+}
+.clearBtn{
+    border:none;
+    outline: none;
+    background-color: transparent;
+    font-size: 1.1rem;
+    text-align: center;
+
+
+}
+
+
+.clearAll{
+    display: flex;
+    justify-content: center;
+    margin: 2rem auto;
+    gap:10px;
+    border-radius: 15px;
+    background: dodgerblue;
+    width: 90%;
+    cursor: pointer;
+    padding: 1rem 0;
+
+    i{
+        color:red;
+        font-size: 1.3rem;
+
+        &:hover{
+            scale: 1.1;
+            transition: all 0.5s;
+        }
+    }
+
+}
+.clearBtn{
+    color:white;
+}
+
+
+@media (min-width: 368px){
+    #todo-wrapper{
+        width:100%;
+        margin:0 auto;
+    
+    }
+    .container{
+        flex-direction: row;
+        gap: 1rem;
+    }
+    .personal, .professional{
+        width:80%;
+    }
+    .input-container{
+        width:100%;
+    }
+    .todo-container{
+        width:100%;
+    }
+    .item-container{
+        width:100%;
+    }
+}
